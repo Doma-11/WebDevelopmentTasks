@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task1</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira Sans"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <reveal-wrapper>
+  <section class="section">
+  <section class="hero-section">
+    
+    <div class="hero-section__image">
+      <img class="img" src="img/heropic.jfif" alt="Placeholder image"> 
+    </div>
+
+  </section>
+
+  <section class="text-section">
+    <div class="text-section__content">
+    
+      <div class="text-section__title"><h3 class="title">HANDCRAFTED AND RESPONSIBLY <br>SOURCED <p class="text">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain.</p></div>
+      <div class="text-section__button"><a href="#expandable"><button class="btn">Learn more</button></a></div>
+      </div>  
+      
+  </section>
+  
+</section>
+<div id="expandable" class="image-text__expandable">
+  <p class="image-text__text">
+    On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain.
+  </p>
+</div>
+</reveal-wrapper>
+
+<div class="spacer"></div>
+
+
+
+  <script>        
+    class RevealWrapper extends HTMLElement {
+        constructor() {
+            super();
+            
+            
+            this.toggleContent = () => {
+                const button = this.querySelector('.text-section__button');
+                const expandable = this.querySelector('.image-text__expandable');
+                
+                if (expandable.classList.contains('image-text__expandable--open')) {
+                    expandable.classList.remove('image-text__expandable--open');
+                    
+                } else {
+                    expandable.classList.add('image-text__expandable--open');
+                    
+                }
+            };
+
+            
+            
+        }
+
+        connectedCallback() {
+            
+            const button = this.querySelector('.text-section__button');
+            button.addEventListener('click', this.toggleContent);
+
+            
+            this.observer.observe(this);
+        }
+
+        disconnectedCallback() {
+            
+            const button = this.querySelector('.text-section__button');
+            button.removeEventListener('click', this.toggleContent);
+            this.observer.disconnect();
+        }
+    }
+
+    
+    customElements.define('reveal-wrapper', RevealWrapper);
+
+    
+</script>
+</body>
+</html>

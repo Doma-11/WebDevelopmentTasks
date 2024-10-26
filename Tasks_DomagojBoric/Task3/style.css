@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css?family=Fira Sans");
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fira Sans'
+  
+}
+
+
+body{
+  width:100%;
+  height: auto; 
+}
+/* CSS */
+.swiper-container {
+  
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+  width: 468px;
+  height: 585px;
+  
+}
+
+/* Navigation buttons */
+.swiper-button-prev,
+.swiper-button-next {
+  background: none;
+  color: black !important;
+    
+}
+
+
+.image-swiper-button-prev{
+  background-image: url(img/arrow.png) !important;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  }
+  
+  .image-swiper-button-next {
+  background-image: url(img/arrow.png) !important;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+
+  }
+  
+/* Toggle button */
+.swiper-toggle {
+    display: block;
+    margin: 20px auto;
+    padding: 0px 20px;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 375px) {
+    .swiper-container {
+        max-width: 375px;
+    }
+    
+    .swiper-button-prev,
+    .swiper-button-next {
+        /* Adjust size for mobile */
+        transform: scale(0.9);
+    }
+}

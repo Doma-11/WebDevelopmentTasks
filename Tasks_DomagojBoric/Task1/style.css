@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css?family=Fira Sans");
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fira Sans'
+ }
+
+ body{
+  width:100%;
+  height: auto; /* Allows the body to grow with content */
+ 
+  
+}
+
+.section{
+  width:1440px;
+  height:576px;
+  display:flex;
+  
+}
+
+/*Index page*/
+.hero-section{
+  width:720px;
+  height:576px;
+  display:flex; 
+}
+.hero-section__image{
+  margin-right: auto;
+}
+.img{
+  width:720px;
+  height:576px;
+  border-radius: 1px;
+}
+
+.text-section{
+  width:720px;
+  height:576px;
+  background-color:  #E3CFCF;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-section__content{
+  width:512px;
+  gap:24px;
+  height:auto;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center; 
+  
+}
+
+.text-section__title{
+gap: 24px;
+opacity: 0px;
+display:flex;
+
+}
+.text{
+  padding-top: 16px;
+}
+
+.title{
+  font-weight: 275;
+  font-size:32px;
+  line-height: 41.6px;
+  color:#000000;
+  
+}
+.text{
+  font-weight:300;
+  font-size:18px;
+  line-height: 23.4px;
+  text-align:center;
+}
+
+/* Naknadno dodano */
+
+
+.text-section__button {
+  margin-top: 16px; /* Space between text and button */
+}
+.text-section__button .btn{
+  background-color: transparent;
+  cursor:pointer;
+  width:170px;
+  height:52px;
+  font-weight: bold;
+  margin:16px;
+}
+
+.image-text__expandable {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.image-text__expandable--open {
+  max-height: 500px; /* Adjust based on content */
+}
+/* Custom Element Styles */
+.reveal-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal-section--visible {
+  opacity: 1;
+  transform: translateY(1);
+}
+.spacer{
+  height: 200vh;
+}
+
+
+.image-text__expandable--open {
+  max-height: 500px; /* Adjust based on content */
+}
+
+.image-text__expandable{
+  width:1440px;
+  height:576px;
+  background-color:  #E3CFCF;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-text__text{
+  font-weight:300;
+  font-size:18px;
+  line-height: 23.4px;
+  text-align:center;
+  
+}
+
+
+
+
+
+
+
+/*Media Query */
+@media(max-width: 375px){
+  body {
+    margin: 0;
+    padding: 0;
+    width:375px;
+    overflow-x:hidden;
+}
+
+.section{
+  width: 100%; /* Changed from fixed width */
+  height: auto;
+  display:flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.hero-section{
+  width: 100%;
+  height: 300px;
+ 
+}
+
+.hero-section__image{
+  width: 100%;
+  height: 300px;
+  }
+
+.img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover; /* Ensure image covers area properly */
+}
+.text-section{
+  width: 375px;
+  height: 464px; /* OVDJE NESTO PUCA*/
+  padding: 20px 16px; /* Add padding instead of fixed width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+
+}
+.text-section__content{
+  width: 100%;
+  max-width: 343px; /* Maximum width */
+  height: 339; /* Changed from fixed height */
+  gap: 24px;
+
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; 
+}
+
+.text-section__title{
+width: 100%; /* Changed from fixed width */
+height: auto; /* Changed from fixed height */
+gap: 16px;
+opacity: 0px;
+
+}
+.title{
+width: 100%; /* Changed from fixed width */
+height: auto; /* Changed from fixed height */
+font-size: 24px;
+font-weight: 275;
+line-height: 31.2px;
+text-align: center;
+margin-bottom: 16px; /* Add spacing */
+}
+.text{
+width: 100%; /* Changed from fixed width */
+height: auto; /* Changed from fixed height */
+font-size: 16px;
+font-weight: 300;
+line-height: 20.8px;
+text-align: center;
+}
+.text-section__button{
+width: 110px;
+height: 48px;
+margin: 0 auto; /* Center the button */
+display: flex;
+justify-content: center;
+margin-bottom:30px;
+
+}
+.btn{
+width: 110px;
+height: 48px;
+padding: 8px 44px 8px 44px;
+gap: 2px;
+border: 1px 0px 0px 0px;
+opacity: 0px;
+
+}
+.image-text__expandable{
+  width:375px;
+  height:750px;
+  background-color:  #E3CFCF;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-text__text{
+  font-weight:300;
+  font-size:18px;
+  line-height: 23.4px;
+  text-align:center;
+  
+}
+
+}

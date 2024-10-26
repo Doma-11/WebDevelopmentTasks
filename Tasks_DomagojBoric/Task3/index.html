@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <title>Task 3</title>
+</head>
+<body>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+            <img src="img/person1.jpg" alt="Person wearing glasses 1">
+        </div>
+        <div class="swiper-slide">
+            <img src="img/person2.jpg" alt="Person wearing glasses 2">
+        </div>
+        <div class="swiper-slide">
+            <img src="img/person3.jpg" alt="Person wearing glasses 3">
+        </div>
+        <div class="swiper-slide">
+          <img src="img/person4.jpg" alt="Person wearing glasses 4">
+      </div>
+    </div>
+    
+    <!-- Navigation buttons -->
+
+
+    <div class="image-swiper-button-prev">
+      <img src="img/arrow.png">
+    </div>
+    <div class="image-swiper-button-next">
+      <img src="img/arrow.png">
+    </div>
+    
+</div>
+
+<!-- Toggle button -->
+<button class="swiper-toggle">Toggle Swiper</button>
+
+<script>
+  
+  // JavaScript - Custom Swiper Class
+class CustomSwiper {
+    constructor() {
+        this.swiper = null;
+        this.isInitialized = false;
+        this.init();
+        this.setupEventListeners();
+    }
+
+    init() {
+        this.swiper = new Swiper('.swiper-container', {
+            // Swiper options
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: false,
+            navigation: {
+              nextEl: "image-swiper-button-next",
+              prevEl: "image-swiper-button-prev",
+              
+            },
+            breakpoints: {
+                // Mobile
+                375: {
+                    slidesPerView: 0.5,
+                    spaceBetween: 20
+                },
+                // Desktop
+                1440: {
+                    slidesPerView: 2.2,
+                    spaceBetween: 30
+                }
+            }
+        });
+
+        // Add slide change event listener
+        this.swiper.on('slideChange', () => {
+            console.log('Active slide index:', this.swiper.activeIndex);
+        });
+
+        this.isInitialized = true;
+    }
+
+    setupEventListeners() {
+        const toggleButton = document.querySelector('.swiper-toggle');
+        toggleButton.addEventListener('click', () => this.toggleSwiper());
+    }
+
+    toggleSwiper() {
+        if (this.isInitialized) {
+            this.swiper.destroy(true, true);
+            this.isInitialized = false;
+            console.log('Swiper destroyed');
+        } else {
+            this.init();
+            console.log('Swiper initialized');
+        }
+    }
+}
+
+// Initialize the custom swiper
+document.addEventListener('DOMContentLoaded', () => {
+    const customSwiper = new CustomSwiper();
+});
+
+</script>
+</body>
+</html>

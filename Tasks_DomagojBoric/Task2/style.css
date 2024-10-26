@@ -1,0 +1,397 @@
+@import url("https://fonts.googleapis.com/css?family=Fira Sans");
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fira Sans'
+}
+
+
+body{
+  width:100%;
+  height: auto; 
+}
+.main-section{
+  width:1440px;
+  height:815px;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow-x: hidden;
+  background-color:  #FFFFFF;
+}
+
+.recipes{
+  width:1312px;
+  height:151px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center; 
+  
+}
+.recipes h1{
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 59.4px;
+  text-align: center;
+}
+.recipes p{
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 31.2px;
+  text-align: center;
+}
+.recipes button{
+  width:128px;
+  height:29px;
+  gap:2px;
+}
+.gumb{
+  background-color: transparent;
+  border: none;
+  color: black; /* Adjust color as needed */
+  font-size: 16px; /* Adjust font size */
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px 0px 20px 0px;
+  position: relative;
+  border-bottom: 1px solid black; /* Line at the bottom */
+}
+.pica{
+  width:1312px;
+  height:472px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+ 
+}
+/* First image */
+.containerslika{
+  width:360px;
+  height:472px;
+  gap:32px;
+}
+.prvaslika{
+  position: relative;
+  width:360px;
+  height:360px;
+}
+.top-left{
+  position: absolute;
+  width: 160px; /* Size of the graphical detail */
+  height: 160px;
+  transform: translate(-60%,-60%);
+}
+.top-leftimg{
+  width: 237.66px;
+  height: 253.05px;
+  gap: 0px;
+  transform: scaleY(-1);
+  transform:scaleX(-1.1);
+} 
+.img {
+  width: 360px; /* Set the desired width */
+  height: 360px; /* Set the same height to make it a square */
+  border-radius: 50%; /* Make it a circle */
+  object-fit: cover; /* Ensure the image fits the circle nicely */
+}
+/* Second image */
+.containerdrugaslika{
+  width:360px;
+  height:472px;
+  gap:32px;
+}
+.drugaslika{
+  position: relative;
+  width:360px;
+  height:360px;
+}
+.top-right{
+  position: absolute;
+  width: 160px; /* Size of the graphical detail */
+  height: 160px;
+  top: 0;
+  right: 0;
+  transform: translate(-15%,-18%);
+  z-index: 1;
+}
+.top-rightimg{
+  width: 232.73px;
+  height: 188.33px;
+  gap: 0px;
+  transform:rotate(108deg);
+} 
+.bottom-left{
+  position: absolute;
+  width: 160px; /* Size of the graphical detail */
+  height: 160px;
+  bottom: 0;
+  left: 0;
+  transform: translate(-108%,-10%) rotate(5.4deg);;
+  z-index: 1;
+}
+.bottom-leftimg{
+  width: 232.73px;
+  height: 188.33px;
+  gap: 0px;
+}
+.img2 {
+  position: relative;
+  width: 360px; /* Set the desired width */
+  height: 360px; /* Set the same height to make it a square */
+  border-radius: 50%; /* Make it a circle */
+  object-fit: cover; /* Ensure the image fits the circle nicely */
+  z-index: 2
+}
+/* Third image */
+.containertrecaslika{
+  width:360px;
+  height:472px;
+  gap:32px; 
+}
+.trecaslika{
+  position: relative;
+  width:360px;
+  height:360px;
+}
+.bottom-right{
+  position: absolute;
+  width: 160px; /* Size of the graphical detail */
+  height: 160px;
+  bottom: 0;
+  right: 0;
+  transform: translate(-3%,-2%);
+  z-index: 1;
+}
+.bottom-rightimg{
+  width: 210.73px;
+  height: 188.33px;
+  gap: 0px;
+}
+.img3 {
+  position: relative;
+  width: 360px; /* Set the desired width */
+  height: 360px; /* Set the same height to make it a square */
+  border-radius: 50%; /* Make it a circle */
+  object-fit: cover; /* Ensure the image fits the circle nicely */
+  z-index: 2
+}
+
+.desc{
+  width:360x;
+  height:80px;
+  margin-top:40px;
+}
+h3{
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 39.6px;
+  text-align: center;
+}
+
+
+/* Mobile */
+@media(max-width: 375px){
+  .main-section{
+    width:375px;
+    height:1602px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+    background-color:  #FFFFFF;
+  }
+
+  .recipes{
+    width:343px;
+    height:150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;  
+  }
+  .recipes h1{
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 39.6px;
+    text-align: center;
+  }
+
+  .recipes p{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+  }
+  .recipes button{
+    width:120px;
+    height:28px;
+    
+  }
+  .gumb{
+    background-color: transparent;
+    border: none;
+    
+    color: black; /* Adjust color as needed */
+    font-size: 14px; /* Adjust font size */
+    font-weight: bold;
+    cursor: pointer;
+    
+    
+    border-bottom: 1px solid black; /* Line at the bottom */
+  }
+  .pica{
+    width:304px;
+    height:1292px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+  /* First image */
+  .containerslika{
+    width:304px;
+    height:388px;
+    gap:32px;
+  }
+  .prvaslika{
+    position: relative;
+    width: 304px;
+    height:304px;
+  }
+  .top-left{
+    position: absolute;
+    width: 135.11px; /* Size of the graphical detail */
+    height: 135.11px;
+    transform: translate(-66%,-66%);
+  }
+  .top-leftimg{
+    width: 226.02px;
+    height: 213.69px;
+    gap: 0px;
+    transform: scaleY(-1);
+    transform:scaleX(-1.1);
+  } 
+  .img {
+    width: 304px; /* Set the desired width */
+    height: 304px; /* Set the same height to make it a square */
+    border-radius: 50%; /* Make it a circle */
+    object-fit: cover; /* Ensure the image fits the circle nicely */
+  }
+
+
+
+/* Second image */
+
+.containerdrugaslika{
+  width:304px;
+  height:388px;
+  gap:32px;
+}
+.drugaslika{
+  position: relative;
+  width: 304px;
+  height:304px;
+}
+.top-right{
+  position: absolute;
+  width: 135.11px; /* Size of the graphical detail */
+  height: 135.11px;
+  top:0;
+  right:0;
+  transform: translate(-15%,-18%);
+  z-index: 1;
+}
+.top-rightimg{
+  width: 196.53px;
+  height: 159.03px;
+  gap: 0px;
+  transform:rotate(108deg);
+} 
+.bottom-left{
+  position: absolute;
+  width: 135.11px; /* Size of the graphical detail */
+  height: 135.11px;
+  bottom: 0;
+  left: 0;
+  transform: translate(-108%,-10%) rotate(5.4deg);;
+  z-index: 1;
+}
+.bottom-leftimg{
+  width: 196.53px;
+  height: 159.03px;
+  gap: 0px;
+}
+.img2 {
+  position: relative;
+  width: 304px; /* Set the desired width */
+  height: 304px;/* Set the same height to make it a square */
+  border-radius: 50%; /* Make it a circle */
+  object-fit: cover; /* Ensure the image fits the circle nicely */
+  z-index: 2
+}
+
+
+/* Third image */
+
+.containertrecaslika{
+  width:304px;
+  height:388px;
+  gap:32px; 
+}
+.trecaslika{
+  position: relative;
+  width: 304px;
+  height:304px;
+}
+.bottom-right{
+  position: absolute;
+  width: 155.11px; /* Size of the graphical detail */
+  height: 155.11px;
+  bottom: 0;
+  right: 0;
+  transform: translate(-3%,-2%);
+  z-index: 1;
+}
+.bottom-rightimg{
+  width: 196.53px;
+  height: 159.03px;
+  gap: 0px;
+}
+.img3 {
+  position: relative;
+  width: 304px; /* Set the desired width */
+  height: 304px;/* Set the same height to make it a square */
+  border-radius: 50%; /* Make it a circle */
+  object-fit: cover; /* Ensure the image fits the circle nicely */
+  z-index: 2
+}
+
+
+
+/* Description */
+
+  .desc{
+    width:304x;
+    height:52px;
+    margin-top:44px;
+  }
+  h3{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 26.4px;
+    text-align: center;
+    
+  }
+}
+
